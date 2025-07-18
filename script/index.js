@@ -24,12 +24,12 @@ $(document).ready(function () {
 
     // design#1 gallery hover description
     $('.gallery li').mouseover(function () {
-        $(this).find('h4').animate({
+        $(this).find('h4').stop().animate({
             'opacity': 1
         }, 300);
     });
     $('.gallery li').mouseout(function () {
-        $(this).find('h4').animate({
+        $(this).find('h4').stop().animate({
             'opacity': 0
         }, 300);
     });
