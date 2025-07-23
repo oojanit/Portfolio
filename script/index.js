@@ -3,7 +3,6 @@ $(document).ready(function () {
     // gnb scroll effect
     $(window).on('scroll', function () {
         var scTop = $(this).scrollTop();
-
         console.log(scTop);
 
         if (scTop >= 0 && scTop < $('#project').offset().top) {
@@ -43,6 +42,11 @@ $(document).ready(function () {
     });
     $('.modal').click(function(){
         $(this).hide();
+    });
+    $(document).keydown(function(e){
+        if (e.keyCode == 27 || e.which == 27) {
+            $('.modal').hide();
+        }
     });
 
 
