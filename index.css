@@ -132,7 +132,8 @@ main#home {
 }
 
 #home .profile {
-    width: 800px;
+    width: 60%;
+    max-width: 1280px;
     /* margin-left: 80px; */
     margin: 0 auto;
     /* float: left; */
