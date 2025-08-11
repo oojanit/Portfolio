@@ -132,34 +132,40 @@ main#home {
 }
 
 #home .profile {
-    width: 500px;
-    margin-left: 80px;
-    float: left;
+    width: 800px;
+    /* margin-left: 80px; */
+    margin: 0 auto;
+    /* float: left; */
     text-align: center;
 }
 #home .profile h2 {
     font-size: 36px;
     font-weight: 700;
-    margin-bottom: 35px;
+    /* margin-bottom: 35px; */
+    text-align: left;
 }
 #home .profile h3 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 70px;
+    text-align: left;
 }
 #home .profile .tools {
     font-size: 24px;
     font-style: italic;
     margin-bottom: 70px;
+    text-align: right;
 }
 #home .profile .greeting {
     font-size: 24px;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
+    text-align: center;
 }
 #home .profile .links {
     font-size: 24px;
     font-style: italic;
     text-decoration: underline;
+    text-align: left;
 }
 #home .profile .links a:hover {
     font-weight: 700;
