@@ -58,9 +58,7 @@ html, body {
     font-family: 'Product Sans';
     font-weight: 400; /* or 700 */
     font-style: normal; /* or italic */
-}
-body {
-    position: relative; /* .modal 기준 */
+    text-align: center;
 }
 
 /* HEADER */
@@ -81,10 +79,10 @@ header nav ul {}
 header nav ul li {
     float: none;
     display: inline-block;
-    width: 140px;
+    width: 20%;
 }
 header nav ul li~li {
-    margin-left: 24px;
+    margin-left: 1%;
     position: relative;
 }
 header nav ul li~li::before {
@@ -98,7 +96,7 @@ header nav ul li~li::before {
     top: 7px;
 }
 header nav ul li a {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 /* SELECTED */
 header nav ul li:hover {
@@ -110,15 +108,16 @@ header nav ul li.on {
 
 /* MAIN */
 main#home {
-    width: 100%;
     height: 100%;
-    padding: 190px 0;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 190px;
     box-sizing: border-box;
     background: url(img/icons/scroll2.gif) no-repeat;
     background-size: 80px;
     background-position: bottom;
 }
-#home .pic {
+/* #home .pic {
     width: 600px;
     height: 600px;
     float: left;
@@ -129,41 +128,41 @@ main#home {
 #home .pic img {
     width: 100%;
     margin-top: -120px;
-}
+} */
 
 #home .profile {
-    width: 60%;
-    max-width: 1280px;
+    width: 100%;
+    height: 100%;
     /* margin-left: 80px; */
     margin: 0 auto;
     /* float: left; */
     text-align: center;
 }
 #home .profile h2 {
-    font-size: 36px;
+    font-size: 2.2rem;
     font-weight: 700;
-    /* margin-bottom: 35px; */
+    margin-bottom: 5%;
     text-align: left;
 }
 #home .profile h3 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 70px;
+    margin-bottom: 5%;
     text-align: left;
 }
 #home .profile .tools {
-    font-size: 24px;
+    font-size: 1.4rem;
     font-style: italic;
-    margin-bottom: 70px;
+    margin-bottom: 10%;
     text-align: right;
 }
-#home .profile .greeting {
+/* #home .profile .greeting {
     font-size: 24px;
     margin-bottom: 80px;
     text-align: center;
-}
+} */
 #home .profile .links {
-    font-size: 24px;
+    font-size: 1.4rem;
     font-style: italic;
     text-decoration: underline;
     text-align: left;
@@ -182,13 +181,14 @@ section article {
     padding-top: 200px;
 }
 article h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     font-style: italic;
     text-align: center;
+    margin-bottom: 10px;
 }
 article p {
-    font-size: 20px;
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -216,9 +216,7 @@ article#project .button a:hover {
     border: 1px solid #ffffff;
 }
 article#project .boxwrap {
-    width: 1280px;
     height: 700px;
-    margin: 0 auto;
 }
 article#project .boxwrap .box {
     width: 49%;
@@ -235,9 +233,7 @@ article#project .boxwrap .box img {
 }
 
 article .gallery {
-    width: 1280px;
     height: 800px;
-    margin: 40px auto;
 }
 article .gallery ul {
     width: 100%;
@@ -266,32 +262,35 @@ article .gallery ul li a h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
     opacity: 0;
 }
 article .gallery ul li:hover img {
     opacity: 0.1;
 }
-article#design1 {}
-article#design2 {
+article#design1 {
     margin-bottom: 200px;
 }
+article#design2 {
+    margin-bottom: 400px;
+}
 /* MODAL */
-.modal {
+/* .modal {
     width: 100%;
     height: 100%;
     background-color: rgba(51, 51, 51, 0.8);
-    position: fixed;
+    position: absolute;
+    justify-content: center;
     z-index: 99;
     top: 0;
     left: 0;
     display: none;
 }
 .modal div {
-    position: relative;
-    top: 5%;
-    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
     transform: translateX(-50%);
     width: 50%;
     height: 90%;
@@ -300,7 +299,7 @@ article#design2 {
 .modal div img {
     width: 100%;
     margin: 0 auto;
-}
+} */
 
 /* FOOTER */
 footer {
@@ -321,3 +320,85 @@ footer .des a {
     text-decoration: underline;
 }
 footer .des p:last-child {}
+
+/* 반응형 - TABLETS */
+@media all and (max-width: 1024px) {
+    .inner {
+        width: 90%;
+    }
+    #home .profile h3 {
+        margin-bottom: 15%;
+    }
+    #home .profile .tools {
+        margin-bottom: 20%;
+    }
+    article .gallery {
+        height: 800px;
+    }
+    article .gallery ul li {
+        width: calc(100% / 2 - 20px);
+        height: calc(50% - 20px);
+    }
+    article#design1 {
+        margin-bottom: 400px;
+    }
+    article#design2 {
+        margin-bottom: 500px;
+    }
+}
+/* 반응형 - MOBILE */
+@media all and (max-width: 767px) {
+    .inner {
+        width: 90%;
+    }
+    header nav ul li {
+        width: 20%;
+    }
+    header nav ul li~li::before {
+        display: none;
+    }
+    header nav ul li a {
+        font-size: 1rem;
+    }
+    #home .profile h3 {
+        margin-bottom: 20%;
+    }
+    #home .profile .tools {
+        margin-bottom: 30%;
+    }
+    section article {
+        width: 100%;
+        padding-top: 200px;
+    }
+    article#project .button a {
+        display: block;
+        margin: 0 auto;
+    }
+    article#project .button a:last-child {
+        margin: 10px auto;
+    }
+    article#project .boxwrap {
+        height: auto;
+    }
+    article#project .boxwrap .box:first-child {
+        display: none;
+    }
+    article#project .boxwrap .box {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+    article .gallery {
+        height: 400px;
+    }
+    article .gallery ul li {
+        width: calc(100% / 2 - 20px);
+        height: calc(50% - 20px);
+    }
+    article#design1 {
+        margin-bottom: 200px;
+    }
+    article#design2 {
+        margin-bottom: 400px;
+    }
+}
