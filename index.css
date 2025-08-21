@@ -284,7 +284,7 @@ article#design2 {
     z-index: 99;
     top: 0;
     left: 0;
-    /* display: none; */
+    display: none;
 }
 .modal div {
     position: absolute;
