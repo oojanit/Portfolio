@@ -345,6 +345,10 @@ footer .des p:last-child {}
     article#design2 {
         margin-bottom: 500px;
     }
+    .modal div {
+    width: 80%;
+    height: 90%;
+    }
 }
 /* 반응형 - MOBILE */
 @media all and (max-width: 767px) {
@@ -400,5 +404,9 @@ footer .des p:last-child {}
     }
     article#design2 {
         margin-bottom: 400px;
+    }
+    .modal div {
+    width: 90%;
+    height: 90%;
     }
 }
