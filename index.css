@@ -154,7 +154,7 @@ main#home {
     font-size: 1.4rem;
     font-style: italic;
     margin-bottom: 10%;
-    text-align: right;
+    text-align: left;
 }
 /* #home .profile .greeting {
     font-size: 24px;
@@ -292,7 +292,7 @@ article#design2 {
     left: 50%;
     text-align: center;
     transform: translate(-50%,-50%);
-    width: 50%;
+    width: 40%;
     height: 90%;
     overflow-y: scroll;
 }
